@@ -158,23 +158,23 @@ class Widget_TwitterWidget extends Widgets
 		$hour = $minute * 60; $day = $hour * 24; $week = $day * 7;
 		if(is_numeric($d) && $d > 0) {
 			// if less then 3 seconds
-			if($d < 3) return "right now";
+			if($d < 3) return "zojuist";
 			// if less then minute
-			if($d < $minute) return floor($d) . " seconds ago";
+			if($d < $minute) return floor($d) . " seconden geleden";
 			// if less then 2 minutes
-			if($d < $minute * 2) return "about 1 minute ago";
+			if($d < $minute * 2) return "1 minuut geleden";
 			// if less then hour
-			if($d < $hour) return floor($d / $minute) . " minutes ago";
+			if($d < $hour) return floor($d / $minute) . " minuten geleden";
 			// if less then 2 hours
-			if($d < $hour * 2) return "about 1 hour ago";
+			if($d < $hour * 2) return "1 uur geleden";
 			// if less then day
-			if($d < $day) return floor($d / $hour) . " hours ago";
+			if($d < $day) return floor($d / $hour) . " uur geleden";
 			// if more then day, but less then 2 days
-			if($d > $day && $d < $day * 2) return "yesterday";
+			if($d > $day && $d < $day * 2) return "gisteren";
 			// if less then year
-			if($d < $day * 365) return floor($d / $day) . " days ago";
+			if($d < $day * 365) return floor($d / $day) . " dagen geleden";
 			// else return more than a year
-			return "over a year ago";
+			return "meer dan een jaar geleden";
 		}
 	}
 

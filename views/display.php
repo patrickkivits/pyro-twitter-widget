@@ -1,6 +1,7 @@
-<div class="pyro-twitter-widget">
+{{ if tweets }}
+<ul>
   {{ tweets }}
-    <span class="timeago">{{ timeago }}</span>
-    <span class="tweet-text">{{ text }}</span>
+    <li>{{ text }}</li>
   {{ /tweets }}
-</div>
+</ul>
+{{ endif }}
